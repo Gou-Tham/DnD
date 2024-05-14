@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Login</title>
+    <!-- Link to external CSS file for styling -->
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Login Form -->
+        <form action="#" class="form">
+            <div class="input-box">
+                <label>User ID:</label>
+                <input type="text" placeholder="Enter User ID" required />
+            </div>
+            <div class="input-box">
+                <label>Password:</label>
+                <input type="password" placeholder="Enter Password" required />
+            </div>
+            <div class="input-box">
+                <label for="projectCategory">User Category:</label>
+                <!-- Dropdown for selecting user category -->
+                <select id="mySelect">
+                <option value="">Select Category</option>
+                <option value="sel.html">Admin/Faculty</option>
+                <option value="dasboard.html">Student</option>
+            </select>
+                <button onclick="redirectToPage()">Login</button>
+            </div>
+            <div class="input-box">
+                <!-- Link to reset password -->
+                <label style="color: blue;"><a href="">Forgot Password?</a></label>
+
+        </form>
+        <!-- Link for registering new account -->
+        <label id="signup"><a href="#" onclick="togglePopup()">Don't have an account?</a></label>
+        </div>
+
+        <!-- Overlay for popup -->
+        <div id="overlay"></div>
+
+        <!-- Popup for registration form -->
+        <div id="popupContainer">
+            <form id="popupForm">
+                <div class="input-row">
+                    <!-- First Name and Last Name input fields -->
+                    <div class="input-box">
+                        <input type="text" id="fname" placeholder="First Name" required>
+                    </div>
+                    <div class="input-box">
+                        <input type="text" id="lname" placeholder="Last Name" required>
+                    </div>
+                </div>
+                <div class="input-row">
+                    <!-- Email and Password input fields -->
+                    <div class="input-box">
+                        <input type="email" id="email" placeholder="Email" required>
+                    </div>
+                    <div class="input-box">
+                        <input type="password" id="pass" placeholder="Password" required>
+                    </div>
+                </div>
+                <div class="input-row">
+                    <!-- Address and KTU ID input fields -->
+                    <div class="input-box">''
+                        <input type="text" id="address" placeholder="Address" required>
+                    </div>
+                    <div class="input-box">
+                        <input type="text" id="ktuid" placeholder="KTU ID" required>
+                    </div>
+                </div>
+                <div class="in99-put-box">
+                    <!-- Category input field -->
+                    <label class="category-label">Category(general/OBC/OEC):</label>
+                    <input type="text" id="category" placeholder="Category" required>
+                </div>
+                <!-- Signup button for registration -->
+                <button type="submit" id="submit"><a href="dasboard.html" class="b1">Sign Up</a></button>
+            </form>
+        </div>
+
+        <!-- Scripts for functionality -->
+        <script src="/js/index.js"></script>
+        <!-- Firebase script for authentication -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+        <!-- Script for handling email operations -->
+        <script src="/js/mail.js"></script>
+</body>
+
+</html>
